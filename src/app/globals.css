@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+.animated-gradient {
+  background: linear-gradient(45deg, #008080, #00ced1, #ffa500, #8b4513);
+  background-size: 400% 400%;
+  animation: changeGradient 10s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
