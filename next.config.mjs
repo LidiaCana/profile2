@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/profile2",
-  output: "export", // <=== enables static exports
-  reactStrictMode: true,
-};
+const nextConfig = {};
 
 export default nextConfig;
+//   basePath: "/profile2",
+// output: "export", // <=== enables static exports
+// reactStrictMode: true,
