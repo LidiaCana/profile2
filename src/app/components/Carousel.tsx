@@ -2,23 +2,30 @@ interface CarouselProps {
   items: any[];
 }
 
-import Card from "./Card";
+import CardDetails from "./CardDetails";
+// import React, { useState } from "react";
 
 export default function Carousel({ items }: CarouselProps) {
+  // const [test, setTest] = useState(0);
+
   return (
     <div
       id="default-carousel"
       className="relative w-full"
       data-carousel="slide"
     >
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-56 rounded-lg md:h-96">
+        <div
+          className="absolute inset-0 w-full h-full bg-gray-900/50 rounded-lg"
+          data-carousel-bg
+        ></div>
         {items.map((item, index) => (
           <div
-            className="hidden duration-700 ease-in-out"
+            className=" duration-700 ease-in-out"
             data-carousel-item
             key={index}
           >
-            <Card title={item.title} list={item.list} />
+            <CardDetails />
           </div>
         ))}
 
