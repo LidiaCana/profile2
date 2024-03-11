@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Carousel2 from "../components/Carousel"; // Import the missing component
