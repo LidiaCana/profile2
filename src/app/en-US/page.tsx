@@ -2,7 +2,8 @@
 
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
-import Carousel2 from "../components/Carousel"; // Import the missing component
+import Carousel from "../components/Carousel"; // Import the missing component
+import Footer from "../components/Footer";
 
 export default function Home() {
   const navBar = ["About", "Skills", "Projects", "Services", "Hobbies", "Blog"];
@@ -47,6 +48,33 @@ export default function Home() {
         "Digital ocean",
         " Bitrise",
       ],
+    },
+  ];
+
+  const projects = [
+    {
+      title: "The Startup",
+      img: "https://link.storjsatelliteshare.io/s/juwmgryprjn47dhzsm4tyy7m3qbq/profile%2FScreenshot%202024-03-12%20at%2017.39.51.png?view=1",
+      description:
+        " I have been working on the migration, restructuring, and redesign of the YourEcosystem platform built in Laravel, to new mulI have been working on the migration, restructuring, and redesign of the YourEcosystem platform built in Laravel, to new mul I have been working on the migration, restructuring, and redesign of the YourEcosystem platform built in Laravel, to new multi-tenancy technology with nest js as the backend and incorporating components with react in the frontend. Using docker for development and deployed on an EC2 server. /nDuring the migration a restructuring of the database is implemented, as well as we incorporate improvements in the security and performance of the API, with the implementation of decorators such as JWTGuards, we also incorporate swagger for the documentation of our API.",
+    },
+    {
+      title: "Wendy CMS",
+      img: "https://link.storjsatelliteshare.io/s/ju44ovjwliaeg2qwprp7vww6ip3a/profile%2FScreenshot%202024-03-12%20at%2017.49.35.png?view=1",
+      description:
+        "My responsibilities within the project were the configuration and implementation of the AWS S3 service to store multimedia from the CMS made with Strapi, to later use it in the frontend, as well as contribute to the deployment of the application through an ECS cluster",
+    },
+    {
+      title: "Materially",
+      img: "https://link.storjsatelliteshare.io/s/jxu7gfppg3k3xy2hqav3fikx2rhq/profile%2FScreenshot%202024-03-12%20at%2017.55.16.png?view=1",
+      description:
+        "My responsibilities in this project were to create a mobile application built in react-native, and implement real time through web socket (apollo client) and push notifications. Also, incorporate a geolocation service with the Google API. I also worked on the implementation of Sentry to capture and log errors, and the implementation of internationalization with I18n, among other features. Technologies employed: React Native, React, Hooks, TypeScript, Eslint with Airbnb, Sentry, Jest, Git, GitHub actions, VSCode, Sass.",
+    },
+    {
+      title: "Dealer connect",
+      img: "https://link.storjsatelliteshare.io/s/jxvx7kvyouf2z2ensct2gogh7bka/profile%2FScreenshot%202024-03-12%20at%2018.00.21.png?view=1",
+      description:
+        "The project involved integrating multiple APIs, implementing complex business logic, and ensuring seamless user experience across different devices and browsers. One of the major obstacles we faced was dealing with inconsistent data from third-party APIs. To overcome this, we implemented robust error handling and data validation mechanisms to detect and handle such cases gracefully. Technologies employed: Vue, Vuex, TypeScript, Eslint, Nest js Git, GitHub actions, VSCode, Docker.",
     },
   ];
 
@@ -114,7 +142,9 @@ export default function Home() {
             </div>
 
             <div className="items-center justify-center m-10">
-              <h1>About me </h1>
+              <h1 className="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-3xl">
+                About me{" "}
+              </h1>
               <br />
               <p>
                 A results-driven software engineer with 6 years of experience
@@ -142,10 +172,11 @@ export default function Home() {
             </a>
           </div>
         </section>
-
         <section id="Skills">
           <div className="items-center justify-center m-10">
-            <h1>My Skills </h1>
+            <h1 className="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-3xl">
+              My Skills{" "}
+            </h1>
             <br />
             <div className=" grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 items-center justify-center">
               {skills.map((item, index) => (
@@ -156,16 +187,21 @@ export default function Home() {
         </section>
         <section id="Projects">
           <div className="items-center justify-center m-10">
-            <h1>Feature projects</h1>
-            <Carousel2 items={skills} />
+            <h1 className="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-3xl">
+              Feature projects
+            </h1>
+            <br />
+            <Carousel items={projects} />
           </div>
         </section>
+
         <section id="Services">
           <div className="items-center justify-center m-10">
             <h1>Services</h1>
           </div>
         </section>
         <section id="Hobbies"></section>
+        <Footer />
       </div>
     </main>
   );
