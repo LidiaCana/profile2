@@ -2,7 +2,11 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import React, { ReactNode } from "react";
 
-const navBar = ["About", "Volunteering", "Blog"];
+const navBar = [
+  { label: "About", link: "/en-US" },
+  { label: "Volunteering", link: "/en-US/volunteering" },
+  { label: "Blog", link: "#" },
+];
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="">

@@ -31,7 +31,7 @@ export default function Home() {
         "Swagger",
         "Node js",
         "Solid",
-        "ZK sandbox",
+        "ZK Aztec Sandbox",
         "Docker",
         "NySql",
         "Jest",

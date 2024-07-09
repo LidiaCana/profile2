@@ -1,5 +1,10 @@
 interface Props {
-  items: string[];
+  items: LinkProps[];
+}
+
+interface LinkProps {
+  label: string;
+  link: string;
 }
 
 export default function Navbar({ items }: Props) {
@@ -39,11 +44,11 @@ export default function Navbar({ items }: Props) {
             {items.map((item, index) => (
               <li key={index}>
                 <a
-                  href="#"
+                  href={item.link}
                   className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
                   aria-current="page"
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}

@@ -122,13 +122,13 @@ const Card = ({
           <a href={link}>{description}</a>
         </div>
         <div className="mt-10">
-          Partners:
+          Partners and Alliances:
           <ul className="flex justify-between">
             {partner.map((p, index: number) => (
               <li key={`list-${index}`} className="flex-1 text-center py-8">
                 <a
                   href={p.link}
-                  className="bg-purple-400 py-3 px-5 mx-5 rounded-lg w-50 block overflow-hidden text-ellipsis whitespace-nowrap"
+                  className="bg-indigo-600 py-3 px-5 mx-5 rounded-lg w-50 block overflow-hidden text-ellipsis whitespace-nowrap"
                 >
                   {p.label}
                 </a>
@@ -150,11 +150,39 @@ const VolunteeringPage = () => {
   return (
     <Layout>
       <section id="volunteering">
-        <div className="justify-center mt-12">
+        <div className="items-center justify-center m-10">
           <h1 className="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-3xl">
-            Volunteering{" "}
+            Why is volunteering important to me?
           </h1>
           <br />
+          <p>
+            Volunteering is incredibly important to me because I have
+            experienced firsthand the impact of community support and
+            generosity. I was able to complete my bachelor’s degree thanks to
+            the economic and emotional support of various individuals and
+            organizations.{" "}
+          </p>
+          <br />
+          <p>
+            Coming from a large family that faced significant hardships after my
+            father passed away, we often struggled financially, to the point
+            where we sometimes didn't have enough money for food. Despite these
+            challenges, I was fortunate enough to continue my education with the
+            help of a scholarship.
+          </p>
+          <br />
+          <p>
+            Given the profound support I received during such a difficult time,
+            I feel deeply compelled to give back to society and my community.
+            Volunteering allows me to pay forward the kindness and assistance I
+            was given, and to help others who are facing their own struggles.
+            It’s a way to express my gratitude and contribute to creating
+            positive change for others in need.
+          </p>
+          <br />
+          <h2 className="mb-4 text-xl font-extrabold text-indigo-600 dark:text-indigo-600 md:text-lg lg:text-xl">
+            Highlight Activities :
+          </h2>
           <div className=" grid grid-cols-1 gap-1 lg:grid-cols-1 lg:gap-1 items-center justify-center">
             {volunteerData.map((item) => (
               <Card
