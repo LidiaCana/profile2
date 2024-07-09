@@ -158,15 +158,15 @@ const VolunteeringPage = () => {
           <p>
             Volunteering is incredibly important to me because I have
             experienced firsthand the impact of community support and
-            generosity. I was able to complete my bachelor’s degree thanks to
-            the economic and emotional support of various individuals and
+            generosity. I was able to complete my bachelors degree thanks to the
+            economic and emotional support of various individuals and
             organizations.{" "}
           </p>
           <br />
           <p>
             Coming from a large family that faced significant hardships after my
             father passed away, we often struggled financially, to the point
-            where we sometimes didn't have enough money for food. Despite these
+            where we sometimes did not have enough money for food. Despite these
             challenges, I was fortunate enough to continue my education with the
             help of a scholarship.
           </p>
@@ -175,9 +175,9 @@ const VolunteeringPage = () => {
             Given the profound support I received during such a difficult time,
             I feel deeply compelled to give back to society and my community.
             Volunteering allows me to pay forward the kindness and assistance I
-            was given, and to help others who are facing their own struggles.
-            It’s a way to express my gratitude and contribute to creating
-            positive change for others in need.
+            was given, and to help others who are facing their own struggles. It
+            is a way to express my gratitude and contribute to creating positive
+            change for others in need.
           </p>
           <br />
           <h2 className="mb-4 text-xl font-extrabold text-indigo-600 dark:text-indigo-600 md:text-lg lg:text-xl">
