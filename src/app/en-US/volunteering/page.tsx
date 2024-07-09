@@ -1,9 +1,3 @@
-// Fotos
-// Que se hizo
-// Estadisticas
-// Alianza o partners
-// Ordenarlos de forma cronologica
-
 import Layout from "@/app/components/Layout";
 import { link } from "fs";
 import Image from "next/image";
@@ -15,6 +9,7 @@ interface CardProps {
   description: string;
   link: string;
   partner: { label: string; link: string }[];
+  align?: "left" | "right";
 }
 const volunteerData = [
   {
@@ -28,6 +23,7 @@ const volunteerData = [
       { label: "Ahmed Castro", link: "https://github.com/Turupawn/Turupawn" },
       { label: "Oscar Fonseca", link: "https://github.com/edsphinx" },
     ],
+    align: "left",
   },
   {
     id: 2,
@@ -39,6 +35,7 @@ const volunteerData = [
     partner: [
       { label: "Ahmed Castro", link: "https://github.com/Turupawn/Turupawn" },
     ],
+    align: "right",
   },
   {
     id: 3,
@@ -48,6 +45,7 @@ const volunteerData = [
     description:
       "One of the things I enjoy most in my life is helping and inspiring other people to get ahead, to build things, to make technology a way of life. This desire to help and inspire (especially to bring technology to other women) has motivated me to sign up to be a speaker at technological events in my country. The conferences that I have developed have been both addressing technical issues and social issues. I believe that to stand out and be a good professional in this field, each team member must lead the continuous improvement of both soft skills and hard skills. Being involved and promoting these types of technological events helps us have a more united community and train better professionals in our field, as well as attract young talent to get involved in this market.",
     partner: [{ label: "Code Exitos", link: "https://codexitos.com/" }],
+    align: "left",
   },
   {
     id: 4,
@@ -62,6 +60,7 @@ const volunteerData = [
         link: "https://www.linkedin.com/company/leadership-mission-international/",
       },
     ],
+    align: "right",
   },
   {
     id: 5,
@@ -73,6 +72,7 @@ const volunteerData = [
     partner: [
       { label: "GeekGirls Latam", link: "https://geekgirlslatam.org/" },
     ],
+    align: "left",
   },
   {
     id: 6,
@@ -85,13 +85,13 @@ const volunteerData = [
       { label: "JCI Honduras", link: "https://www.jci.org/" },
       { label: "UTH", link: "https://www.uth.hn/" },
       {
-        label: "Gerencia de ambiente Honduras",
+        label: "Gerencia ambiental",
         link: "https://www.facebook.com/GerenciaDeAmbienteSps/",
       },
     ],
+    align: "right",
   },
 ] satisfies CardProps[];
-
 const Card = ({
   title,
   img,
@@ -99,28 +99,37 @@ const Card = ({
   link,
   partner,
   id,
+  align,
 }: CardProps): React.ReactElement => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="">
-        <Image src={img} alt={title} width={230} height={230} />
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 m-10">
+      {align === "left" && (
+        <div className="flex justify-center items-center">
+          <Image src={img} alt={title} width={430} height={430} />
+        </div>
+      )}
       <div className="col-span-2">
-        <div className="">
+        <div className="my-5">
           <h2 className="text-xl">{title}</h2>
-          <a href={link} className="mt-10">
-            Reference
+          <a
+            href={link}
+            className="mt-10 text-sky-400 w-50 block overflow-hidden text-ellipsis whitespace-nowrap"
+          >
+            {link}
           </a>
         </div>
         <div className=" ">
           <a href={link}>{description}</a>
         </div>
-        <div className="">
+        <div className="mt-10">
           Partners:
-          <ul>
+          <ul className="flex justify-between">
             {partner.map((p, index: number) => (
-              <li key={`list-${index}`}>
-                <a key={`partner-${index}`} href={p.link}>
+              <li key={`list-${index}`} className="flex-1 text-center py-8">
+                <a
+                  href={p.link}
+                  className="bg-purple-400 py-3 px-5 mx-5 rounded-lg w-50 block overflow-hidden text-ellipsis whitespace-nowrap"
+                >
                   {p.label}
                 </a>
               </li>
@@ -128,14 +137,20 @@ const Card = ({
           </ul>
         </div>
       </div>
+      {align === "right" && (
+        <div className="flex justify-center items-center">
+          <Image src={img} alt={title} width={430} height={430} />
+        </div>
+      )}
     </div>
   );
 };
+
 const VolunteeringPage = () => {
   return (
     <Layout>
       <section id="volunteering">
-        <div className="items-center justify-center m-10">
+        <div className="justify-center mt-12">
           <h1 className="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-3xl">
             Volunteering{" "}
           </h1>
@@ -143,13 +158,14 @@ const VolunteeringPage = () => {
           <div className=" grid grid-cols-1 gap-1 lg:grid-cols-1 lg:gap-1 items-center justify-center">
             {volunteerData.map((item) => (
               <Card
-                id={item.id}
                 key={item.id}
                 title={item.title}
                 img={item.img}
                 description={item.description}
                 link={item.link}
                 partner={item.partner}
+                align={item.align}
+                id={item.id}
               />
             ))}
           </div>
