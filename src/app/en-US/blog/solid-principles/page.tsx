@@ -33,7 +33,7 @@ const Page = () => {
             These five principles guide developers in creating software that can adapt to changing requirements without breaking existing functionality.
           </p>
           <p className="mb-4 text-gray-700 dark:text-gray-300">
-            In this article, I'll share insights from a real-world project where we refactored a monolithic e-commerce platform into a 
+            In this article, I&apos;ll share insights from a real-world project where we refactored a monolithic e-commerce platform into a 
             modular, scalable architecture by applying SOLID principles. This case study demonstrates how these principles can transform 
             a codebase from a maintenance nightmare into a developer-friendly, extensible system.
           </p>
@@ -254,12 +254,12 @@ async function notifyUsers(notifications: Notification[]) {
               4. Interface Segregation Principle (ISP)
             </h3>
             <p className="mb-3 text-gray-700 dark:text-gray-300">
-              <strong>Definition:</strong> Clients should not be forced to depend on interfaces they don't use.
+              <strong>Definition:</strong> Clients should not be forced to depend on interfaces they don&apos;t use.
             </p>
             <p className="mb-3 text-gray-700 dark:text-gray-300">
               <strong>Real-World Example:</strong> We had a monolithic <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">IUserService</code> interface 
               that included methods for authentication, profile management, admin operations, and reporting. Classes that only needed basic user operations 
-              were forced to implement all methods, even if they didn't need them.
+              were forced to implement all methods, even if they didn&apos;t need them.
             </p>
             <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-3">
               <p className="font-semibold mb-2">Before (Violating ISP):</p>
@@ -459,7 +459,7 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
               calculators all became pluggable components.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              <strong>Result:</strong> Adding new payment methods (like cryptocurrency) took hours instead of days, and we didn't need to 
+              <strong>Result:</strong> Adding new payment methods (like cryptocurrency) took hours instead of days, and we didn&apos;t need to 
               modify any existing payment processing code.
             </p>
           </div>
@@ -518,7 +518,7 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
           </h2>
           <ol className="list-decimal list-inside space-y-3 text-gray-700 dark:text-gray-300 ml-4">
             <li>
-              <strong>Start Small:</strong> Don't try to refactor everything at once. Identify the most problematic areas and refactor incrementally.
+              <strong>Start Small:</strong> Don&apos;t try to refactor everything at once. Identify the most problematic areas and refactor incrementally.
             </li>
             <li>
               <strong>Use Design Patterns:</strong> SOLID principles work hand-in-hand with design patterns like Strategy, Factory, and Repository patterns.
@@ -530,7 +530,7 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
               <strong>Code Reviews:</strong> Make SOLID principles part of your code review checklist. Encourage team members to identify violations.
             </li>
             <li>
-              <strong>Don't Over-Engineer:</strong> SOLID principles are guidelines, not strict rules. Sometimes a simple solution is better than a perfectly SOLID one.
+              <strong>Don&apos;t Over-Engineer:</strong> SOLID principles are guidelines, not strict rules. Sometimes a simple solution is better than a perfectly SOLID one.
             </li>
             <li>
               <strong>Continuous Refactoring:</strong> Make refactoring a regular part of your development process, not a one-time event.
@@ -544,19 +544,19 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
           </h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700 dark:text-gray-300 ml-4">
             <li>
-              <strong>Creating too many small classes:</strong> While SRP is important, don't create a class for every single method. 
+              <strong>Creating too many small classes:</strong> While SRP is important, don&apos;t create a class for every single method. 
               Find the right balance between granularity and practicality.
             </li>
             <li>
-              <strong>Premature abstraction:</strong> Don't create interfaces for everything from the start. Extract interfaces when you 
+              <strong>Premature abstraction:</strong> Don&apos;t create interfaces for everything from the start. Extract interfaces when you 
               have multiple implementations or when you need to swap dependencies.
             </li>
             <li>
               <strong>Ignoring the team context:</strong> SOLID principles should improve team productivity, not hinder it. Consider your 
-              team's experience level and project constraints.
+              team&apos;s experience level and project constraints.
             </li>
             <li>
-              <strong>Violating YAGNI (You Aren't Gonna Need It):</strong> Don't add complexity "just in case." Apply SOLID when it solves 
+              <strong>Violating YAGNI (You Aren&apos;t Gonna Need It):</strong> Don&apos;t add complexity &quot;just in case.&quot; Apply SOLID when it solves 
               real problems, not hypothetical ones.
             </li>
           </ul>
@@ -567,7 +567,7 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
             Conclusion
           </h2>
           <p className="mb-4 text-gray-700 dark:text-gray-300">
-            SOLID principles are not just theoretical concepts—they are practical tools that can significantly improve your codebase's 
+            SOLID principles are not just theoretical concepts—they are practical tools that can significantly improve your codebase&apos;s 
             quality, maintainability, and scalability. The case study presented here demonstrates that applying these principles can lead 
             to measurable improvements in bug rates, development speed, and code quality.
           </p>
@@ -577,7 +577,7 @@ const orderService2 = new OrderService(postgresRepo, awsSESEmail);`}
             team, and requirements.
           </p>
           <p className="text-gray-700 dark:text-gray-300">
-            Start applying SOLID principles in your next feature or refactoring task. You'll find that while it may require more upfront 
+            Start applying SOLID principles in your next feature or refactoring task. You&apos;ll find that while it may require more upfront 
             thought and design, the long-term benefits in terms of maintainability, testability, and developer happiness are well worth the investment.
           </p>
         </section>
